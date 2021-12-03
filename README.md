@@ -23,7 +23,7 @@ I had run my code locally using Jupyter notebook. So, I had to upload all the fi
 
 ## Parallel training implementation
 1. You have to add both Trainingdataset.csv and ValidationDataset.csv to hadoop folder. By using **hdfs dfs -ls/data** command.
-2. Run the following command to create model and parallel traing implementation across your cluster: spark-submit --master spark://<Private IP DNS name> train.py hdfs:///data/TrainingDataset.csv hdfs:///model
+2. Run the following command to create model and parallel traing implementation across your cluster: spark-submit --master spark://ip-172-31-30-207.ec2.internal train.py hdfs:///data/TrainingDataset.csv hdfs:///model
 3. Then we have to get our model using **hdfs dfs -get /model** command.
 ## Single machine prediction application 
 For single machine predictio we use the following command:
